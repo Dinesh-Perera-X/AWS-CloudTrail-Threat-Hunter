@@ -1,0 +1,63 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "111122223333",
+        "arn": "arn:aws:iam::111122223333:root"
+      },
+      "eventTime": "2026-10-07T10:15:30Z",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.50",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "requestParameters": null,
+      "responseElements": {"ConsoleLogin": "Success"}
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER",
+        "arn": "arn:aws:iam::111122223333:user/dev-admin",
+        "userName": "dev-admin"
+      },
+      "eventTime": "2026-10-07T10:20:12Z",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "us-west-2",
+      "sourceIPAddress": "198.51.100.22",
+      "userAgent": "aws-cli/2.11.0",
+      "requestParameters": {
+        "groupId": "sg-0123456789abcdef0",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "tcp",
+              "fromPort": 22,
+              "toPort": 22,
+              "ipRanges": {"items": [{"cidrIp": "0.0.0.0/0"}]}
+            }
+          ]
+        }
+      },
+      "responseElements": {"return": true}
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER2",
+        "arn": "arn:aws:iam::111122223333:user/analyst",
+        "userName": "analyst"
+      },
+      "eventTime": "2026-10-07T10:25:00Z",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "192.168.1.100",
+      "userAgent": "Boto3/1.26.0",
+      "requestParameters": null,
+      "responseElements": null
+    }
+  ]
+}
